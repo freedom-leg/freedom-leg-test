@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes zoomToLeg1 {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  100% {
+    transform: scale(1.6) translateZ(0);
+  }
+}
+
+@keyframes zoomToLeg2 {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  100% {
+    transform: scale(1.6) translateZ(0);
+  }
+}
+
+@keyframes zoomToLeg3 {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  100% {
+    transform: scale(1.5) translateZ(0);
+  }
+}
+
+.zoom-1 {
+  animation: zoomToLeg1 15s ease-in-out forwards;
+  transform-origin: center center;
+}
+
+.zoom-2 {
+  animation: zoomToLeg2 15s ease-in-out forwards;
+  transform-origin: center center;
+}
+
+.zoom-3 {
+  animation: zoomToLeg3 15s ease-in-out forwards;
+  transform-origin: center 70%;
+}
+
+@media (min-width: 750px) {
+  .zoom-1,
+  .zoom-2,
+  .zoom-3 {
+    background-size: contain !important;
+  }
+}
